@@ -1,5 +1,5 @@
 {
-  "name": "e-commerce",
+  "name": "devstore",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "lucide-react": "^0.290.0",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18"

@@ -1,22 +1,27 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ReactNode } from "react";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  title: "E-Commerce",
-  description: "Basic e-commerce project for apprentice.",
+  title: "Devstore",
+  description:
+    "Um projeto de comércio eletrônico simples, ideal para iniciantes que desejam aprender mais sobre o mundo do desenvolvimento web.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface IRootLayout {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: IRootLayout) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+    <html className={inter.variable} lang="pt-BR">
+      <body className="bg-zinc-950 text-zinc-50 antialiased">{children}</body>
     </html>
   );
 }
