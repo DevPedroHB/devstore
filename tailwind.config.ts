@@ -16,7 +16,7 @@ const config: Config = {
         "product-info": "17.5rem",
       },
       maxHeight: {
-        home: "53.75rem",
+        app: "53.75rem",
       },
       width: {
         search: "20rem",
