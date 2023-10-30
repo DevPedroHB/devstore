@@ -23,6 +23,7 @@ const config: Config = {
       },
       height: {
         "skeleton-home": "53.5rem",
+        "skeleton-search": "25rem",
       },
       gridTemplateRows: {
         app: "min-content max-content",
