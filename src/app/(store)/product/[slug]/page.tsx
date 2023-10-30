@@ -1,7 +1,24 @@
 import { api } from "@/data/api";
 import { formatCurrency } from "@/functions/format-currency";
 import { Product } from "@/types/products";
+import { Metadata } from "next";
 import Image from "next/image";
+
+interface IProduct {
+  params: {
+    slug: string;
+  };
+}
+
+export async function generateMetadata({
+  params,
+}: IProduct): Promise<Metadata> {
+  const product = await getProduct(params.slug);
+
+  return {
+    title: product.title,
+  };
+}
 
 async function getProduct(slug: string): Promise<Product> {
   const response = await api(`/products/${slug}`, {
@@ -13,12 +30,6 @@ async function getProduct(slug: string): Promise<Product> {
   const product = await response.json();
 
   return product;
-}
-
-interface IProduct {
-  params: {
-    slug: string;
-  };
 }
 
 export default async function Product({ params }: IProduct) {

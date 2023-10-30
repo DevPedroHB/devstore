@@ -1,8 +1,13 @@
 import { api } from "@/data/api";
 import { formatCurrency } from "@/functions/format-currency";
 import { Product } from "@/types/products";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 async function getFeaturedProducts(): Promise<Product[]> {
   const response = await api("/products/featured", {

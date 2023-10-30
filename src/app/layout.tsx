@@ -9,7 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Devstore",
+  title: {
+    template: "%s | devstore",
+    default: "devstore",
+  },
   description:
     "Um projeto de comércio eletrônico simples, ideal para iniciantes que desejam aprender mais sobre o mundo do desenvolvimento web.",
 };
