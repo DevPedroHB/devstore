@@ -1,3 +1,4 @@
+import { env } from "@/env";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   },
   description:
     "Um projeto de comércio eletrônico simples, ideal para iniciantes que desejam aprender mais sobre o mundo do desenvolvimento web.",
+  metadataBase: new URL(env.APP_URL),
 };
 
 interface IRootLayout {
