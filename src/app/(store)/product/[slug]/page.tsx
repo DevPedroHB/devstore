@@ -46,10 +46,10 @@ export default async function Product({ params }: IProduct) {
   const product = await getProduct(params.slug);
 
   return (
-    <div className="max-h-app relative grid grid-cols-3">
+    <div className="relative grid max-h-app grid-cols-3">
       <div className="col-span-2 overflow-hidden">
         <Image
-          src={product.image}
+          src={`/images${product.image}`}
           alt={product.title}
           width={1000}
           height={1000}

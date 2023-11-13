@@ -46,7 +46,7 @@ export default async function Search({ searchParams }: ISearch) {
               key={product.id}
             >
               <Image
-                src={product.image}
+                src={`/images${product.image}`}
                 className="transition-transform duration-500 group-hover:scale-105"
                 width={480}
                 height={480}

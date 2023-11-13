@@ -30,7 +30,7 @@ export default async function Home() {
         className="group relative col-span-6 row-span-6 flex items-end justify-center overflow-hidden rounded-lg bg-zinc-900"
       >
         <Image
-          src={highlightedProduct.image}
+          src={`/images${highlightedProduct.image}`}
           className="transition-transform duration-500 group-hover:scale-105"
           width={920}
           height={920}
@@ -52,7 +52,7 @@ export default async function Home() {
             key={product.id}
           >
             <Image
-              src={product.image}
+              src={`/images${product.image}`}
               className="transition-transform duration-500 group-hover:scale-105"
               width={920}
               height={920}
