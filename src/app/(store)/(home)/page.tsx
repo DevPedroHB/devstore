@@ -24,7 +24,7 @@ export default async function Home() {
   const [highlightedProduct, ...otherProducts] = await getFeaturedProducts();
 
   return (
-    <div className="max-h-app grid grid-cols-9 grid-rows-6 gap-6">
+    <div className="grid max-h-app grid-cols-9 grid-rows-6 gap-6">
       <Link
         href={`/product/${highlightedProduct.slug}`}
         className="group relative col-span-6 row-span-6 flex items-end justify-center overflow-hidden rounded-lg bg-zinc-900"
